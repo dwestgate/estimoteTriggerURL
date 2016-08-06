@@ -9,13 +9,25 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
 
+    let beaconManager = ESTBeaconManager()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        self.beaconManager.delegate = self
+        self.beaconManager.requestAlwaysAuthorization()
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(
+            UIUserNotificationSettings(forTypes: .Alert, categories: nil))
+
+        self.beaconManager.startMonitoringForRegion(CLBeaconRegion(
+            proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!,
+            major: 16402, minor: 37673, identifier: "monitored region"))
+            
+            
+        
         return true
     }
 
@@ -40,7 +52,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    
+    func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
+        let notification = UILocalNotification()
+        notification.alertBody =
+            "You are within range of Lime!"
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+    }
+    
+    func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
+        let notification = UILocalNotification()
+        notification.alertBody =
+        "You are no longer within range of Lime!"
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+    }
+    
 
 }
 

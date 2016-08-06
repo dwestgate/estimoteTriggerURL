@@ -1,0 +1,15 @@
+PODS:
+  - EstimoteIndoorSDK (2.2.1):
+    - EstimoteSDK (~> 4.1)
+  - EstimoteSDK (4.7.1)
+
+DEPENDENCIES:
+  - EstimoteIndoorSDK
+
+SPEC CHECKSUMS:
+  EstimoteIndoorSDK: c0a4b18f10b1b70d21bb7a69d66257508fc1ae80
+  EstimoteSDK: b7bae318490d7652f3b17d3b04d317cb64dc447e
+
+PODFILE CHECKSUM: fc4ffcd48632a23ffe8947c83ab3fea3885db721
+
+COCOAPODS: 1.0.0
