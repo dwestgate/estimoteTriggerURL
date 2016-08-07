@@ -158,12 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63C8C9D41D565164001CE28B /* Build configuration list for PBXNativeTarget "estimoteTriggerURL" */;
 			buildPhases = (
-				6895E20D478178759412AA0A /* 📦 Check Pods Manifest.lock */,
+				6895E20D478178759412AA0A /* [CP] Check Pods Manifest.lock */,
 				63C8C9A81D565164001CE28B /* Sources */,
 				63C8C9A91D565164001CE28B /* Frameworks */,
 				63C8C9AA1D565164001CE28B /* Resources */,
-				B83AF47F0743A252C5435393 /* 📦 Embed Pods Frameworks */,
-				548DDD6A344E89BBACAD3794 /* 📦 Copy Pods Resources */,
+				B83AF47F0743A252C5435393 /* [CP] Embed Pods Frameworks */,
+				548DDD6A344E89BBACAD3794 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +222,7 @@
 				TargetAttributes = {
 					63C8C9AB1D565164001CE28B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5V8272ZD46;
 					};
 					63C8C9BF1D565164001CE28B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -281,14 +282,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		548DDD6A344E89BBACAD3794 /* 📦 Copy Pods Resources */ = {
+		548DDD6A344E89BBACAD3794 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +297,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-estimoteTriggerURL/Pods-estimoteTriggerURL-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6895E20D478178759412AA0A /* 📦 Check Pods Manifest.lock */ = {
+		6895E20D478178759412AA0A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,14 +312,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B83AF47F0743A252C5435393 /* 📦 Embed Pods Frameworks */ = {
+		B83AF47F0743A252C5435393 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,10 +480,13 @@
 			baseConfigurationReference = 9275B8B8E7CC63486B50FC9E /* Pods-estimoteTriggerURL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = estimoteTriggerURL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.refabricants.estimoteTriggerURL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Debug;
@@ -492,10 +496,13 @@
 			baseConfigurationReference = 0BB1C91E0EE254B8300A4B52 /* Pods-estimoteTriggerURL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = estimoteTriggerURL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.refabricants.estimoteTriggerURL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Release;

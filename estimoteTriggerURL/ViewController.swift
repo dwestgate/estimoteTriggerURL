@@ -22,7 +22,9 @@ class ViewController: UIViewController, WKNavigationDelegate, ESTBeaconManagerDe
     
     let websitesByBeacons = [
         "16402:37673": "https://dwestgate.github.io/Lemon/",
-        "22371:9501": "https://dwestgate.github.io/Candy/"
+        "22371:9501": "https://dwestgate.github.io/Candy/",
+        "49028:65076": "https://dollop.github.io/beetroot/"
+        
     ]
     
     

@@ -57,14 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
         let notification = UILocalNotification()
         notification.alertBody =
-            "You are within range of Lime!"
+            "You are within range of Lemon!"
         UIApplication.sharedApplication().presentLocalNotificationNow(notification)
     }
     
     func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
         let notification = UILocalNotification()
         notification.alertBody =
-        "You are no longer within range of Lime!"
+        "You are no longer within range of Lemon!"
         UIApplication.sharedApplication().presentLocalNotificationNow(notification)
     }
     
